@@ -1,13 +1,13 @@
 namespace TestingMaxValue
 {
-    public class Tests
+    public class UnitTest1
     {
         [Test]
         public void GivenMaxInFirstPosition_CheckMaxNumber_ReturnMaxInFirstPosition()
         {
             
-            int A = 10, B = 9, C = 5;
-            MaximumNumber.MaxValue<int> example = new MaximumNumber.MaxValue<int>();
+            double A = 100.5, B = 90.67, C = 54.45;
+            MaximumNumber.MaxFloatValue<double> example = new MaximumNumber.MaxFloatValue<double>();
             var ActuvalResult = example.maximumofintegers(A, B, C);
             Assert.AreEqual(A, ActuvalResult);
 
@@ -17,8 +17,8 @@ namespace TestingMaxValue
         public void GivenMaxInSecondPosition_CheckMaxNumber_ReturnMaxInsecondPosition()
         {
 
-            int A = 9, B = 10, C = 5;
-            MaximumNumber.MaxValue<int> example = new MaximumNumber.MaxValue<int>();
+            double A = 90.67, B = 100.5, C = 54.45;
+            MaximumNumber.MaxFloatValue<double> example = new MaximumNumber.MaxFloatValue<double>();
             var ActuvalResult = example.maximumofSecintegers(A, B, C);
             Assert.AreEqual(B, ActuvalResult);
 
@@ -28,8 +28,8 @@ namespace TestingMaxValue
         public void GivenMaxInThirsPosition_CheckMaxNumber_ReturnMaxInThirdPosition()
         {
 
-            int A = 9, B = 5, C = 10;
-            MaximumNumber.MaxValue<int> example = new MaximumNumber.MaxValue<int>();
+            double A = 90.67, B = 54.45, C = 100.5;
+            MaximumNumber.MaxFloatValue<double> example = new MaximumNumber.MaxFloatValue<double>();
             var ActuvalResult = example.maximumofThirdintegers(A, B, C);
             Assert.AreEqual(C, ActuvalResult);
 
