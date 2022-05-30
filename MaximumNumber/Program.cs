@@ -1,19 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-MaximumNumber.MaxValue<int> example = new MaximumNumber.MaxValue<int>();
-Console.WriteLine(example.maximumofintegers(10, 9, 5));
-Console.WriteLine(example.maximumofSecintegers(9, 10, 5));
-Console.WriteLine(example.maximumofThirdintegers(9, 5, 10));
-MaximumNumber.MaxValue<double> value = new MaximumNumber.MaxValue<double>();
-Console.WriteLine(value.MaximumofFloatValue( 100.5, 90.67,54.45));
-Console.WriteLine(value.maximumofSecFloatvalue(90.67, 100.5, 54.45));
-Console.WriteLine(value.maximumofThirdFloatValue(90.67, 54.45, 100.5));
-MaximumNumber.MaxValue<string> program = new MaximumNumber.MaxValue<string>();
-Console.WriteLine(program.MaximumofStringValue("Apple", "Banana", "Peach"));
-Console.WriteLine(program.MaximumofFirstStringValue("Peach", "Banana", "Apple"));
-Console.WriteLine(program.MaximumofSecStringValue("Apple", "Peach", "Banana"));
+﻿// See https://aka.ms/new-console-template for more information//
+int[] arr = { 7, 56, 45, 25, 70, 88, 90 };
+MaximumNumber.MaxValue<int> example = new MaximumNumber.MaxValue<int>(arr);
+example.CheckMaximumValue();
+double[] arr_ = { 10.5, 16.56, 25.7, 67.45, 45.34, 68.78 };
+MaximumNumber.MaxValue<double> value = new MaximumNumber.MaxValue<double>(arr_);
+value.CheckMaximumValue();
+string[] _arr = { "prasanna", "arjun", "nanna", "malli", "vara" };
+MaximumNumber.MaxValue<string> program = new MaximumNumber.MaxValue<string>(_arr);
+program.CheckMaximumValue();
 
 
-
+    
 
 

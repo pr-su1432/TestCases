@@ -8,176 +8,42 @@ namespace MaximumNumber
 {
     public class MaxValue<T> where T : IComparable
     {
-        public int maximumofintegers(int firstvalue, int secondvalue, int thirdvale)
-        {
-            if(firstvalue>secondvalue && firstvalue>thirdvale)
-            {
-                return firstvalue;
-                
-            }
-            else if(secondvalue > firstvalue && secondvalue > thirdvale)
-            {
-                return secondvalue;
-         
-            }
-            else
-            {
-                return thirdvale;
-            }
+        public T[] MaxArray;
         
-        }
-        public int maximumofSecintegers(int firstvalue, int secondvalue, int thirdvale)
+
+        public MaxValue(T[] valueArray)
         {
-            if (firstvalue > secondvalue && firstvalue > thirdvale)
-            {
-                return firstvalue;
-
-            }
-            else if (secondvalue > firstvalue && secondvalue > thirdvale)
-            {
-                return secondvalue;
-
-            }
-            else
-            {
-                return thirdvale;
-            }
-         
-
-        }
-
-       
-
-        public int maximumofThirdintegers(int firstvalue, int secondvalue, int thirdvale)
-        {
-            if (firstvalue > secondvalue && firstvalue > thirdvale)
-            {
-                return firstvalue;
-
-            }
-            else if (secondvalue > firstvalue && secondvalue > thirdvale)
-            {
-                return secondvalue;
-
-            }
-            else
-            {
-                return thirdvale;
-            }
-           
-        }
-        public double MaximumofFloatValue(double firstvalue, double secondvalue, double thirdvale)
-        {
-            if (firstvalue > secondvalue && firstvalue > thirdvale)
-            {
-                return firstvalue;
-
-            }
-            else if (secondvalue > firstvalue && secondvalue > thirdvale)
-            {
-                return secondvalue;
-
-            }
-            else
-            {
-                return thirdvale;
-            }
-
-        }
-        public double maximumofSecFloatvalue(double firstvalue, double secondvalue, double thirdvale)
-        {
-            if (firstvalue > secondvalue && firstvalue > thirdvale)
-            {
-                return firstvalue;
-
-            }
-            else if (secondvalue > firstvalue && secondvalue > thirdvale)
-            {
-                return secondvalue;
-
-            }
-            else
-            {
-                return thirdvale;
-            }
-
-
-        }
-        public double maximumofThirdFloatValue(double firstvalue, double secondvalue, double thirdvale)
-        {
-            if (firstvalue > secondvalue && firstvalue > thirdvale)
-            {
-                return firstvalue;
-
-            }
-            else if (secondvalue > firstvalue && secondvalue > thirdvale)
-            {
-                return secondvalue;
-
-            }
-            else
-            {
-                return thirdvale;
-            }
-
+            this.MaxArray = valueArray;
         }
 
         
 
-        public string MaximumofStringValue(string firststring, string secondstring, string thirdstring)
+        public T[] SortArray(T[] values)
         {
-            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)    
-            {
-                return firststring;
+            Array.Sort(values);
+            return values;
+        }
 
-            }
-            else if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0)
-            {
-                return secondstring;
-
-            }
-            else
-            {
-                return thirdstring;
-            }
+        public T CheckMax(T[] maxArray)
+        {
+            var values = SortArray(maxArray);
+            return values[values.Length - 1];
 
         }
 
-        public string MaximumofFirstStringValue(string firststring, string secondstring, string thirdstring)
+        public T CheckMaximumValue()
         {
-            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)
-            {
-                return firststring;
-
-            }
-            else if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0)
-            {
-                return secondstring;
-
-            }
-            else
-            {
-                return thirdstring;
-            }
-
+            T value = CheckMax(this.MaxArray);
+            PrintMax(value);
+            return value;
         }
-        public string MaximumofSecStringValue(string firststring, string secondstring, string thirdstring)
+
+        public void PrintMax(T value)
         {
-            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)
-            {
-                return firststring;
-
-            }
-            else if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0)
-            {
-                return secondstring;
-
-            }
-            else
-            {
-                return thirdstring;
-            }
-
+            Console.WriteLine("Maximum value is ---> " + value);
         }
+
+        
     }
 }
+
