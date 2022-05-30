@@ -8,5 +8,12 @@ MaximumNumber.MaxValue<double> value = new MaximumNumber.MaxValue<double>();
 Console.WriteLine(value.MaximumofFloatValue( 100.5, 90.67,54.45));
 Console.WriteLine(value.maximumofSecFloatvalue(90.67, 100.5, 54.45));
 Console.WriteLine(value.maximumofThirdFloatValue(90.67, 54.45, 100.5));
+MaximumNumber.MaxValue<string> program = new MaximumNumber.MaxValue<string>();
+Console.WriteLine(program.MaximumofStringValue("Apple", "Banana", "Peach"));
+Console.WriteLine(program.MaximumofFirstStringValue("Peach", "Banana", "Apple"));
+Console.WriteLine(program.MaximumofSecStringValue("Apple", "Peach", "Banana"));
+
+
+
 
 

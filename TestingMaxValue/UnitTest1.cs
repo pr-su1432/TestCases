@@ -2,6 +2,10 @@ namespace TestingMaxValue
 {
     public class UnitTest1
     {
+        public char Banana { get; private set; }
+        public char Apple { get; private set; }
+        public char Peach { get; private set; }
+
         [Test]
 
         public void GivenMaxInFirstPosition_CheckMaxNumber_ReturnMaxInFirstPosition()
@@ -59,7 +63,7 @@ namespace TestingMaxValue
 
         }
         [Test]
-        public void GivenMaxValueInThirsPosition_CheckMaxNumber_ReturnMaxValueInThirdPosition()
+        public void GivenMaxValueInThirdPosition_CheckMaxNumber_ReturnMaxValueInThirdPosition()
         {
 
             double A = 90.67, B = 54.45, C = 100.5;
@@ -69,7 +73,38 @@ namespace TestingMaxValue
 
 
         }
+        [Test]
+        public void GivenMaxValueOfInThirdPosition_CheckMaxNumber_ReturnMaxValueofInThirdPosition()
+        {
+
+            string A = "Apple", B = "Banana", C = "Peach";
+            MaximumNumber.MaxValue<string> example = new MaximumNumber.MaxValue<string>();
+            var ActuvalResult = example.MaximumofStringValue(A,B,C);
+            Assert.AreEqual(C, ActuvalResult);
+
+
+        }
+        [Test]
+        public void GivenMaxValueOfInFirstPosition_CheckMaxNumber_ReturnMaxValueofInFirstPosition()
+        {
+
+            string A = "Peach", B = "Banana", C = "Apple";
+            MaximumNumber.MaxValue<string> example = new MaximumNumber.MaxValue<string>();
+            var ActuvalResult = example.MaximumofFirstStringValue(A, B, C);
+            Assert.AreEqual(A, ActuvalResult);
+
+
+        }
+        [Test]
+        public void GivenMaxValueOfInSecondPosition_CheckMaxNumber_ReturnMaxValueofInSecondPosition()
+        {
+
+            string A = "Apple", B = "Peach", C = "Banana";
+            MaximumNumber.MaxValue<string> example = new MaximumNumber.MaxValue<string>();
+            var ActuvalResult = example.MaximumofSecStringValue(A, B, C);
+            Assert.AreEqual(B, ActuvalResult);
+
+
+        }
     }
 }
-
-

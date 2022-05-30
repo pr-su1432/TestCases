@@ -45,6 +45,9 @@ namespace MaximumNumber
          
 
         }
+
+       
+
         public int maximumofThirdintegers(int firstvalue, int secondvalue, int thirdvale)
         {
             if (firstvalue > secondvalue && firstvalue > thirdvale)
@@ -115,6 +118,64 @@ namespace MaximumNumber
             else
             {
                 return thirdvale;
+            }
+
+        }
+
+        
+
+        public string MaximumofStringValue(string firststring, string secondstring, string thirdstring)
+        {
+            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)    
+            {
+                return firststring;
+
+            }
+            else if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0)
+            {
+                return secondstring;
+
+            }
+            else
+            {
+                return thirdstring;
+            }
+
+        }
+
+        public string MaximumofFirstStringValue(string firststring, string secondstring, string thirdstring)
+        {
+            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)
+            {
+                return firststring;
+
+            }
+            else if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0)
+            {
+                return secondstring;
+
+            }
+            else
+            {
+                return thirdstring;
+            }
+
+        }
+        public string MaximumofSecStringValue(string firststring, string secondstring, string thirdstring)
+        {
+            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0)
+            {
+                return firststring;
+
+            }
+            else if (secondstring.CompareTo(firststring) > 0 && secondstring.CompareTo(thirdstring) > 0)
+            {
+                return secondstring;
+
+            }
+            else
+            {
+                return thirdstring;
             }
 
         }
