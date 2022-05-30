@@ -2,9 +2,6 @@ namespace TestingMaxValue
 {
     public class UnitTest1
     {
-        public char Banana { get; private set; }
-        public char Apple { get; private set; }
-        public char Peach { get; private set; }
 
         [Test]
 
